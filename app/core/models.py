@@ -5,7 +5,9 @@ class About(models.Model):
     """An about section for the website."""
 
     featured = models.BooleanField(default=True)
-    text = models.TextField()
+    text = models.TextField(
+        help_text="NOTE: Add a blank space to empty lines to maintain the line break."
+    )
 
     class Meta:
         verbose_name_plural = "About"
