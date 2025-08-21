@@ -286,8 +286,23 @@ a::selection {
 
   code.snippet {
     display: block !important;
-    white-space: nowrap !important;
     overflow: auto !important;
+    max-width: 55vw !important;
+  }
+
+  code.snippet::-webkit-scrollbar {
+    width: var(--scrollbar-size);
+    height: var(--scrollbar-size);
+  }
+
+  code.snippet::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: var(--background-dark);
+  }
+
+  code.snippet::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: var(--dim);
   }
 }
 
